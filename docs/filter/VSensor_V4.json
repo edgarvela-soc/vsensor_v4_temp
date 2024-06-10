@@ -1,0 +1,81 @@
+{
+	"Name": "VSensor_V4",
+	"Description": "Rx Path A + B",
+	"Tool": "FW",
+	"Version": "1.2",
+	"Design": {
+		"visitedTabs": [
+			"filter-type",
+			"specifications",
+			"components",
+			"tolerances",
+			"next-steps"
+		],
+		"filterType": "bandPass",
+		"specifications": {
+			"gain": 0,
+			"gainUnit": "dB",
+			"passbandAttenuation": -3,
+			"passbandFrequency": 350000,
+			"stopbandAttenuation": -20,
+			"stopbandFrequency": 900000,
+			"filterResponseValue": 0.67,
+			"filterResponseSlider": "68",
+			"centerFrequency": 800000
+		},
+		"components": {
+			"vsPlus": 5,
+			"vsMinus": -4.5,
+			"optimization": "Power",
+			"optimizationPreference": "nonSpecific",
+			"compensateForGbw": true,
+			"preferredAlgorithms": {
+				"sallenKey|lowPass": "lowpassV2"
+			},
+			"stages": [
+				{
+					"stageLetter": "A",
+					"componentSizing": 31,
+					"gain": -1,
+					"gainEnabled": false,
+					"implementation": "deliyannisFriend",
+					"opAmps": "AD8038"
+				},
+				{
+					"stageLetter": "B",
+					"componentSizing": 29,
+					"gain": -1,
+					"gainEnabled": false,
+					"implementation": "deliyannisFriend",
+					"opAmps": "AD8038"
+				},
+				{
+					"stageLetter": "C",
+					"componentSizing": 33,
+					"gain": -1,
+					"gainEnabled": false,
+					"implementation": "deliyannisFriend",
+					"opAmps": "AD8038"
+				}
+			],
+			"recommendedAmps": [],
+			"sortOrder": [
+				0,
+				1,
+				2
+			]
+		},
+		"tolerances": {
+			"resistorTolerance": "1%",
+			"capacitorTolerance": "5%",
+			"inductorTolerance": "5%",
+			"opAmpGbwTolerance": "20%",
+			"resistorPreferredSeries": "E24",
+			"capacitorPreferredSeries": "E24",
+			"inductorPreferredSeries": "E12"
+		},
+		"nextSteps": {}
+	},
+	"CreatedDate": "2024-02-02 05:00:44 PM",
+	"UpdatedDate": "2024-02-02 05:00:44 PM"
+}

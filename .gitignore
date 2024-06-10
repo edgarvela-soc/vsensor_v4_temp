@@ -1,0 +1,49 @@
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+sym-lib-table
+*-backups
+
+# rescue files
+*-cache.lib
+*-rescue.*
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Exported BOM files
+*.xml
+# *.csv
+
+#KiCAD lock files
+*.kicad_sch.lck
+
+### KiCad Patch ###
+rescue-backup/
+
+*.tsv
+
+# local base files
+Software/
+StructuralAnalysis
+
+# MacOS litter
+.DS_Store
+._*
+
+# production archives
+production/*.zip
+production/*/*.zip
